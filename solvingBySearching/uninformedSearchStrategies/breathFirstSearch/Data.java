@@ -1,8 +1,8 @@
-import javax.swing.*;
+package solvingBySearching.uninformedSearchStrategies.breathFirstSearch;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -19,7 +19,7 @@ public class Data {
 
     public Data() {
         try {
-            System.setIn(new FileInputStream(new File("/Users/muneeburrehman/IdeaProjects/Ai_Asi1_T1/src/input.txt")));
+            System.setIn(new FileInputStream(new File("/Users/muneeburrehman/IdeaProjects/Ai_Asi1_T1/src/solvingBySearching/uninformedSearchStrategies/breathFirstSearch/input.txt")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

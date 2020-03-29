@@ -1,5 +1,6 @@
+package solvingBySearching.uninformedSearchStrategies.breathFirstSearch;
+
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 public class Driver {
 

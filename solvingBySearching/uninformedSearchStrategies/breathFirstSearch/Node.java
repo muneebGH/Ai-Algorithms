@@ -1,3 +1,5 @@
+package solvingBySearching.uninformedSearchStrategies.breathFirstSearch;
+
 public class Node {
     int state;
     int cost;

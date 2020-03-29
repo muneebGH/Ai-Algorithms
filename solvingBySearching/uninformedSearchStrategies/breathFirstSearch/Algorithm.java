@@ -1,3 +1,5 @@
+package solvingBySearching.uninformedSearchStrategies.breathFirstSearch;
+
 import java.util.*;
 
 public class Algorithm {

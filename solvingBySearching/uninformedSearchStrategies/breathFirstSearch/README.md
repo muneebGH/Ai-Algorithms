@@ -1,0 +1,2 @@
+#UniformCostSearchStrategies.BreathFirstSearch
+this
