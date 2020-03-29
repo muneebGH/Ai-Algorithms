@@ -7,16 +7,14 @@ public class Algorithm {
     private int[][] transitionMatrix;
     private String[][] testCases;
     int noOfActions;
-    String[] actions={
-            "Clean","MoveToRoom1","MoveToRoom2",
-    };
+    String[] actions;
 
 
     private ArrayDeque<Node> frontier = new ArrayDeque<>();
     Set<Integer> exploredSet = new HashSet<>();
 
 
-    public Algorithm( int states, int noOfTestCases, Vector<String> stateDescriptions, int[][] transitionMatrix, String[][] testCases,int noOfActions) {
+    public Algorithm( int states, int noOfTestCases, Vector<String> stateDescriptions, int[][] transitionMatrix, String[][] testCases,int noOfActions,String[] actions) {
 
         this.states = states;
         this.noOfTestCases = noOfTestCases;
@@ -24,6 +22,7 @@ public class Algorithm {
         this.transitionMatrix = transitionMatrix;
         this.testCases = testCases;
         this.noOfActions=noOfActions;
+        this.actions=actions;
 
 
     }

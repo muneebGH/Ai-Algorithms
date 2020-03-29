@@ -1,5 +1,7 @@
 import java.util.Comparator;
 
+
+//for future ucs
 public class NodeComparator implements Comparator<Node> {
 
     @Override
