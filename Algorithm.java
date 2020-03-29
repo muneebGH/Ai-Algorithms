@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Algorithm {
     private int states;
@@ -37,7 +36,7 @@ public class Algorithm {
         for (int i = 0; i < noOfTestCases; i++) {
             System.out.println(stateDescriptions.indexOf(testCases[i][0]));
             System.out.println(stateDescriptions.indexOf(testCases[i][1]));
-            solutions.add(uniformCostSearch(stateDescriptions.indexOf(testCases[i][0]), stateDescriptions.indexOf(testCases[i][1])));
+            solutions.add(breathFirstSearch(stateDescriptions.indexOf(testCases[i][0]), stateDescriptions.indexOf(testCases[i][1])));
             frontier = new ArrayDeque<>();
             exploredSet = new HashSet<>();
         }
@@ -47,9 +46,9 @@ public class Algorithm {
     }
 
 
-    private String uniformCostSearch(int startState, int goalState) {
+    private String breathFirstSearch(int startState, int goalState) {
         String toReturn=null;
-        Node start = new Node(startState, null, 0);
+        Node start = new Node(startState, null);
         frontier.addFirst(start);
         while(true){
             if (frontier.isEmpty()){
@@ -65,7 +64,7 @@ public class Algorithm {
             exploredSet.add(n.state);
             int[] actionList=transitionMatrix[n.state];
             for(int i=0;i<noOfActions;i++){
-                Node child=new Node(actionList[i],n,1);
+                Node child=new Node(actionList[i],n);
                 if(!frontier.contains(child) || !exploredSet.contains(child.state)){
                     frontier.add(child);
                 }

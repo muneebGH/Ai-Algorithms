@@ -3,10 +3,9 @@ public class Node {
     int cost;
     Node parent;
 
-    public Node(int state, Node parent,int cost) {
+    public Node(int state, Node parent) {
         this.state = state;
         this.parent = parent;
-        this.cost=cost;
     }
 
     @Override
