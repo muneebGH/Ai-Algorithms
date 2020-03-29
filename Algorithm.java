@@ -13,7 +13,7 @@ public class Algorithm {
     };
 
 
-    private Queue<Node> frontier = new PriorityQueue<>(10, new NodeComparator());
+    private ArrayDeque<Node> frontier = new ArrayDeque<>();
     Set<Integer> exploredSet = new HashSet<>();
 
 
@@ -38,7 +38,7 @@ public class Algorithm {
             System.out.println(stateDescriptions.indexOf(testCases[i][0]));
             System.out.println(stateDescriptions.indexOf(testCases[i][1]));
             solutions.add(uniformCostSearch(stateDescriptions.indexOf(testCases[i][0]), stateDescriptions.indexOf(testCases[i][1])));
-            frontier = new PriorityQueue<>(10, new NodeComparator());
+            frontier = new ArrayDeque<>();
             exploredSet = new HashSet<>();
         }
 
@@ -50,12 +50,12 @@ public class Algorithm {
     private String uniformCostSearch(int startState, int goalState) {
         String toReturn=null;
         Node start = new Node(startState, null, 0);
-        frontier.add(start);
+        frontier.addFirst(start);
         while(true){
             if (frontier.isEmpty()){
                 break;
             }
-            Node n=frontier.poll();
+            Node n=frontier.removeFirst();
 
             if(n.state==goalState){
                 toReturn= getSolutionFromNode(n);
