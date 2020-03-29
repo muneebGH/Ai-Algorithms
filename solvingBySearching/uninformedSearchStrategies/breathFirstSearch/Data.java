@@ -17,9 +17,9 @@ public class Data {
 
     Scanner sc;
 
-    public Data() {
+    public Data(String path) {
         try {
-            System.setIn(new FileInputStream(new File("/Users/muneeburrehman/IdeaProjects/Ai_Asi1_T1/src/solvingBySearching/uninformedSearchStrategies/breathFirstSearch/input.txt")));
+            System.setIn(new FileInputStream(new File(path)));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
