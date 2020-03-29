@@ -26,11 +26,6 @@ public class Data {
 
         sc = new Scanner(System.in);
         init();
-       // initMat();
-        //  initActions();
-        //initStateDescriptions();
-        //initTestCases();
-
     }
 
     private void init() {
@@ -41,7 +36,6 @@ public class Data {
         sc.nextLine();
         sc.nextLine();
         for (int i = 0; i < state; i++) {
-            // System.out.println(sc.nextLine());
             stateDescriptions.add(sc.nextLine());
         }
         sc.nextLine();
@@ -76,20 +70,5 @@ public class Data {
 
     }
 
-
-    private void initTestCases(){
-        String[][] temp=
-                {
-                        {"(AgentInRoom1, Room1Clean, Roam2Dusty)", "(AgentInRoom1, Room1Clean, Roam2Clean)"},
-                        {"(AgentInRoom1, Room1Dusty, Roam2Dusty)", "(AgentInRoom2, Room1Clean, Roam2Clean)"}
-
-                };
-        testCases=new String[2][2];
-        for(int i=0;i<2;i++){
-            for(int j=0;j<2;j++){
-                testCases[i][j]=temp[i][j];
-            }
-        }
-    }
 
 }
