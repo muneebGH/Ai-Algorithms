@@ -34,8 +34,6 @@ public class Algorithm {
 
 
         for (int i = 0; i < noOfTestCases; i++) {
-            System.out.println(stateDescriptions.indexOf(testCases[i][0]));
-            System.out.println(stateDescriptions.indexOf(testCases[i][1]));
             solutions.add(breathFirstSearch(stateDescriptions.indexOf(testCases[i][0]), stateDescriptions.indexOf(testCases[i][1])));
             frontier = new ArrayDeque<>();
             exploredSet = new HashSet<>();
@@ -109,7 +107,7 @@ public class Algorithm {
 
         String toReturn="";
         for(int i=0;i<v.size();i++){
-            toReturn=toReturn+actions[v.elementAt(i)];
+            toReturn=toReturn+" -> "+actions[v.elementAt(i)];
         }
 
         return toReturn;
