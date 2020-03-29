@@ -21,7 +21,7 @@ ___
  tab, first string is a state representing initial state and second string is also a state representing final state.__
 ___
 
-[URL of repository](https://www.google.com)
+[URL of repository](https://github.com/muneebGH/Ai-Algorithms)
 
 
 
